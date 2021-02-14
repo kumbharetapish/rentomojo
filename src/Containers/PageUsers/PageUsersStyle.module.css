@@ -5,6 +5,7 @@
   width: 80%;
   margin: 0px auto;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .cardWrapper:nth-child(odd) {
@@ -73,7 +74,7 @@
 .viewBtn:hover {
   background-color: #28618f;
 }
-@media only screen and (min-width: 800px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
   .cartCantainer {
     width: 100%;
     /* padding-b/ottom: 1rem; */
@@ -83,7 +84,7 @@
   }
 }
 
-@media only screen and (min-width: 10px) and (max-width: 801px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 10px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
   .Container {
     width: 95%;
   }

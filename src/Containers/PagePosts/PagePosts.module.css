@@ -5,6 +5,7 @@
   width: 80%;
   margin: 0px auto;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 
 .cardWrapper:nth-child(odd) {
