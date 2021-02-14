@@ -20,10 +20,9 @@ class PageUsers extends Component {
             usersList: res.data,
           });
         }
-        console.log(res.data);
       })
       .catch((err) => {
-        console.log(err + "in product listing");
+        console.log(err + " in product listing");
       });
   }
 
@@ -34,18 +33,20 @@ class PageUsers extends Component {
         <div className={UsersStyle.cardWrapper}>
           <div className={UsersStyle.tblHeading}>Name</div>
           <div className={UsersStyle.tblHeading}>Company Name </div>
-          <div className={UsersStyle.tblHeading}>View </div>
+          <div className={UsersStyle.viewHeading}>View </div>
         </div>
         {this.state.usersList ? (
           <>
             {this.state.usersList.map((el) => {
               return (
                 <div className={UsersStyle.cardWrapper}>
-                  <div>{el.name ? el.name : ""}</div>
-                  <div>{el.company && el.company.name ? el.company.name : ""}</div>
-                  <div>
+                  <div className={UsersStyle.title}>{el.name ? el.name : ""}</div>
+                  <div className={UsersStyle.companyName}>
+                    {el.company && el.company.name ? el.company.name : ""}
+                  </div>
+                  <div className={UsersStyle.viewBtn}>
                     <div
-                      className={UsersStyle.viewBtn}
+                      // className={UsersStyle.viewBtn}
                       onClick={() => {
                         this.props.history.push(`${postsLinkPage}/${el.id}`);
                       }}

@@ -14,28 +14,49 @@
 .cardWrapper {
   width: 100%;
   display: flex;
-  padding: 15px 0;
+  padding: 15px;
 }
 
-.cardWrapper > div {
-  width: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .tblHeading {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 20px;
   font-weight: 700;
+  text-transform: capitalize;
 }
-.viewBtn {
-  width: 150px;
-  padding: 7px 0;
+.viewHeading {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100px;
+  font-size: 20px;
+  font-weight: 700;
+  padding: 5px 0;
+}
+
+.title {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-transform: capitalize;
+  border-left: solid 1px #28618f;
+  padding-left: 10px;
+}
+
+.viewBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  padding: 5px 0;
   background-color: #617c9e;
   color: aliceblue;
   border-radius: 10px;
   cursor: pointer;
+  text-align: center;
 }
 
 .viewBtn:hover {
@@ -46,16 +67,13 @@
     width: 100%;
     /* padding-b/ottom: 1rem; */
   }
-  .containerHeading h1 {
-    font-size: 20px;
-  }
 }
 
 @media only screen and (min-width: 10px) and (max-width: 801px) and (-webkit-min-device-pixel-ratio: 1) {
   .Container {
     width: 95%;
   }
-  .containerHeading h1 {
-    font-size: 20px;
+  .cardWrapper:nth-child(odd) {
+    border-radius: 0px;
   }
 }

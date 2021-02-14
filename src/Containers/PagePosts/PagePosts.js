@@ -41,17 +41,16 @@ class PagePosts extends Component {
         <div className="pageHeading">Posts</div>
         <div className={PostsStyle.cardWrapper}>
           <div className={PostsStyle.tblHeading}>Title</div>
-          <div className={PostsStyle.tblHeading}>Post Details</div>
+          <div className={PostsStyle.viewHeading}>Post Details</div>
         </div>
         {this.state.postsList ? (
           <>
             {this.state.postsList.map((el) => {
               return (
                 <div className={PostsStyle.cardWrapper}>
-                  <div className={PostsStyle.tblHeading}>{el.title ? el.title : ""}</div>
-                  <div>
+                  <div className={PostsStyle.title}>{el.title ? el.title : ""}</div>
+                  <div className={PostsStyle.viewBtn}>
                     <div
-                      className={PostsStyle.viewBtn}
                       onClick={() => {
                         this.props.history.push(`${postsDetailLinkPage}/${el.id}`);
                       }}

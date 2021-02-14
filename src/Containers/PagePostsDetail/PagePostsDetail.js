@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { postsDetailLinkPage } from "../../Services/Utils";
+import { postsDetailLinkPage, postsLinkPage } from "../../Services/Utils";
 import WebServices from "../../Services/WebServices";
 import PostsDetailStyle from "./PagePostsDetail.module.css";
 
@@ -53,14 +53,15 @@ class PagePostsDetail extends Component {
     }
   }
 
-  deletePost(postId) {
-    if (postId) {
+  deletePost(postId, userId) {
+    if (postId && userId) {
       WebServices.deletePost(postId)
         .then((res) => {
           if (res && res.data) {
             this.setState({
-              delete: true,
+              deleteVisible: false,
             });
+            this.props.history.push(`${postsLinkPage}/${userId}`);
           }
         })
         .catch((err) => {
@@ -94,7 +95,6 @@ class PagePostsDetail extends Component {
                   this.setState({
                     deleteVisible: true,
                   });
-                  // this.deletePost(this.state.postDetail.id);
                 }}
               >
                 Delete Post
@@ -113,15 +113,7 @@ class PagePostsDetail extends Component {
               <div className={PostsDetailStyle.deletepopupwrapper}>
                 <div className={PostsDetailStyle.popupwrapper}>
                   <div>Are you sure ?</div>
-                  <div>
-                    <div
-                      className={PostsDetailStyle.delBtn}
-                      onClick={() => {
-                        this.deletePost(this.state.postDetail.id);
-                      }}
-                    >
-                      Yes
-                    </div>
+                  <div className={PostsDetailStyle.btnWrapper}>
                     <div
                       className={PostsDetailStyle.viewBtn}
                       onClick={() => {
@@ -131,6 +123,14 @@ class PagePostsDetail extends Component {
                       }}
                     >
                       No
+                    </div>
+                    <div
+                      className={PostsDetailStyle.delBtn}
+                      onClick={() => {
+                        this.deletePost(this.state.postDetail.id, this.state.postDetail.userId);
+                      }}
+                    >
+                      Yes
                     </div>
                   </div>
                 </div>

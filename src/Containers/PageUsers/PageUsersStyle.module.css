@@ -14,28 +14,60 @@
 .cardWrapper {
   width: 100%;
   display: flex;
-  padding: 15px 0;
+  padding: 15px;
 }
 
-.cardWrapper > div {
-  width: 33%;
+.tblHeading {
+  width: 90%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.viewHeading {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.tblHeading {
+  width: 100px;
+  font-size: 20px;
   font-weight: 700;
+  padding: 5px 0;
+}
+
+.title {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-transform: capitalize;
+  border-left: solid 1px #28618f;
+  padding-left: 10px;
+}
+
+.companyName {
+  width: 50%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-transform: capitalize;
+  border-left: solid 1px #28618f;
+  /* border-right: solid 1px #28618f; */
+  padding-left: 10px;
 }
 .viewBtn {
-  width: 100px;
-  padding: 7px 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 70px;
+  height: 30px;
+  padding: 5px 0;
   background-color: #617c9e;
   color: aliceblue;
   border-radius: 10px;
   cursor: pointer;
+  text-align: center;
 }
 
 .viewBtn:hover {
@@ -55,7 +87,7 @@
   .Container {
     width: 95%;
   }
-  .containerHeading h1 {
-    font-size: 20px;
+  .cardWrapper:nth-child(odd) {
+    border-radius: 0px;
   }
 }

@@ -7,18 +7,12 @@
   flex-direction: column;
 }
 
-.cardWrapper:nth-child(odd) {
-  background-color: #e4e8f5;
-  border-radius: 10px;
-}
-
 .cardWrapper {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px 0;
 }
 
 .cardWrapper > div {
@@ -38,6 +32,7 @@
 .viewBtn {
   width: 150px;
   padding: 7px 0;
+  margin-bottom: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -81,7 +76,7 @@
 .btnWrapper {
   display: flex;
   width: 100%;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 
@@ -126,16 +121,25 @@
     width: 100%;
     /* padding-b/ottom: 1rem; */
   }
-  .containerHeading h1 {
-    font-size: 20px;
-  }
 }
 
-@media only screen and (min-width: 10px) and (max-width: 801px) and (-webkit-min-device-pixel-ratio: 1) {
+@media only screen and (min-width: 10px) and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1) {
   .Container {
-    width: 95%;
+    width: 100%;
   }
-  .containerHeading h1 {
-    font-size: 20px;
+  .btnWrapper {
+    flex-direction: column;
+  }
+  .popupwrapper {
+    width: 70%;
+  }
+  .popupwrapper > div > div {
+    margin: 10px;
+  }
+  .commentWrapper {
+    border-radius: 0px;
+    padding: 20px;
+    text-align: justify;
+    width: 75%;
   }
 }
