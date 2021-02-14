@@ -1,0 +1,61 @@
+.Container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  margin: 0px auto;
+  flex-direction: column;
+}
+
+.cardWrapper:nth-child(odd) {
+  background-color: #e4e8f5;
+  border-radius: 10px;
+}
+.cardWrapper {
+  width: 100%;
+  display: flex;
+  padding: 15px 0;
+}
+
+.cardWrapper > div {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tblHeading {
+  font-weight: 700;
+}
+.viewBtn {
+  width: 150px;
+  padding: 7px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #617c9e;
+  color: aliceblue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.viewBtn:hover {
+  background-color: #28618f;
+}
+@media only screen and (min-width: 800px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .cartCantainer {
+    width: 100%;
+    /* padding-b/ottom: 1rem; */
+  }
+  .containerHeading h1 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 10px) and (max-width: 801px) and (-webkit-min-device-pixel-ratio: 1) {
+  .Container {
+    width: 95%;
+  }
+  .containerHeading h1 {
+    font-size: 20px;
+  }
+}
